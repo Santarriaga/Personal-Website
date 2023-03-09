@@ -5,6 +5,7 @@
 }
 .contact img {
   width: 92%;
+  transform: scaleX(-1);
 }
 .contact h2 {
   font-size: 45px;
@@ -75,7 +76,7 @@
 }
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  background: linear-gradient(90.21deg, #1d1d1d -5.91%, #352480 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {

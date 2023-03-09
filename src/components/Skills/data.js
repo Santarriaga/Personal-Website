@@ -1,18 +1,19 @@
-import backEnd1 from "/src/assets/img/skill-icons/node-icon.svg"
-import backEnd2 from "/src/assets/img/skill-icons/express-icon.svg"
-import backEnd3 from "/src/assets/img/skill-icons/mongodb-icon.svg"
-import backEnd4 from "/src/assets/img/skill-icons/sql-icon.png"
+import backEnd1 from "/src/assets/img/skill-icons/node-icon.svg";
+import backEnd2 from "/src/assets/img/skill-icons/express-icon.svg";
+import backEnd3 from "/src/assets/img/skill-icons/mongodb-icon.svg";
+import backEnd4 from "/src/assets/img/skill-icons/sql-icon.png";
+import backEnd5 from "/src/assets/img/skill-icons/firebase-icon.svg";
 
-import frontEnd1 from "/src/assets/img/skill-icons/html_icon.svg"
-import frontEnd2 from "/src/assets/img/skill-icons/css_icon.svg"
-import frontEnd3 from "/src/assets/img/skill-icons/javascript_icon.svg"
-import frontEnd4 from "/src/assets/img/skill-icons/react-logo.svg"
+import frontEnd1 from "/src/assets/img/skill-icons/html_icon.svg";
+import frontEnd2 from "/src/assets/img/skill-icons/css_icon.svg";
+import frontEnd3 from "/src/assets/img/skill-icons/javascript_icon.svg";
+import frontEnd4 from "/src/assets/img/skill-icons/react-logo.svg";
 
-import mobile1 from "/src/assets/img/skill-icons/android_icon.svg"
-import mobile4 from "/src/assets/img/skill-icons/flutter-icon.svg"
-import mobile2 from "/src/assets/img/skill-icons/kotlin-icon.svg"
-import mobile3 from "/src/assets/img/skill-icons/java-icon.svg"
-import mobile5 from "/src/assets/img/skill-icons/github_icon.svg"
+import mobile1 from "/src/assets/img/skill-icons/android_icon.svg";
+import mobile4 from "/src/assets/img/skill-icons/flutter-icon.svg";
+import mobile2 from "/src/assets/img/skill-icons/kotlin-icon.svg";
+import mobile3 from "/src/assets/img/skill-icons/java-icon.svg";
+import mobile5 from "/src/assets/img/skill-icons/github_icon.svg";
 export const data = [
   {
     id: 1,
@@ -40,6 +41,12 @@ export const data = [
         id: 3,
         img: backEnd4,
         title: "SQL",
+        experience: "Proficient",
+      },
+      {
+        id: 4,
+        img: backEnd5,
+        title: "Firebase",
         experience: "Proficient",
       },
     ],
@@ -110,4 +117,4 @@ export const data = [
       },
     ],
   },
-]
+];
