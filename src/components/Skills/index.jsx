@@ -1,53 +1,53 @@
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { useEffect, useState } from "react";
-import colorSharp from "/src/assets/img/color-sharp.png";
-import "./Skills.css";
-import { data } from "./data";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
+import { useEffect, useState } from "react"
+import colorSharp from "/src/assets/img/color-sharp.png"
+import "./Skills.css"
+import { data } from "./data"
 
 const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  // const responsive = {
+  //   superLargeDesktop: {
+  //     // the naming can be any, depends on you.
+  //     breakpoint: { max: 4000, min: 3000 },
+  //     items: 5,
+  //   },
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //   },
+  // };
 
-  const [skills, setSkill] = useState(data);
-  const [index, setIndex] = useState(0);
+  const [skills, setSkill] = useState(data)
+  const [index, setIndex] = useState(0)
 
   //keeps array within bounds
   useEffect(() => {
-    const lastIndex = skills.length - 1;
+    const lastIndex = skills.length - 1
     if (index < 0) {
-      setIndex(lastIndex);
+      setIndex(lastIndex)
     }
     if (index > lastIndex) {
-      setIndex(0);
+      setIndex(0)
     }
-  }, [index, skills]);
+  }, [index, skills])
 
   //moves to next item
   useEffect(() => {
     let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 5000);
+      setIndex(index + 1)
+    }, 5000)
     return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
+      clearInterval(slider)
+    }
+  }, [index])
 
   return (
     <section className="skill" id="skills">
@@ -64,18 +64,18 @@ const Skills = () => {
 
               <div className="section-center">
                 {skills.map((item, itemIndex) => {
-                  const { id, title, stack } = item;
+                  const { id, title, stack } = item
 
-                  let position = "nextSlide";
+                  let position = "nextSlide"
                   if (itemIndex == index) {
-                    position = "activeSlide";
+                    position = "activeSlide"
                   }
 
                   if (
                     itemIndex === index - 1 ||
                     (index === 0 && itemIndex === skills.length - 1)
                   ) {
-                    position = "lastSlide";
+                    position = "lastSlide"
                   }
 
                   return (
@@ -83,7 +83,7 @@ const Skills = () => {
                       <h4>{title}</h4>
                       <div className="skill-container">
                         {stack.map((skill) => {
-                          const { id, img, title, experience } = skill;
+                          const { id, img, title, experience } = skill
                           return (
                             <div className="skill-box" key={id}>
                               <div className="skill-title">
@@ -94,11 +94,11 @@ const Skills = () => {
                                 <h4>{experience}</h4>
                               </div>
                             </div>
-                          );
+                          )
                         })}
                       </div>
                     </article>
-                  );
+                  )
                 })}
                 <button className="prev" onClick={() => setIndex(index - 1)}>
                   <FiChevronLeft />
@@ -113,6 +113,6 @@ const Skills = () => {
       </div>
       <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
-  );
-};
-export default Skills;
+  )
+}
+export default Skills

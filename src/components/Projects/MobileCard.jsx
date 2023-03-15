@@ -16,22 +16,3 @@ const MobileCard = ({ title, description, imgUrl }) => {
   )
 }
 export default MobileCard
-
-{
-  /*
- <div class="container">
-<a href="./links/pest.html">
-  <div class="card">
-    <div class="imgBx">
-      <img src="./img/pest/pest1_cropped.png" />
-    </div>
-    <div class="content">
-      <h2>Pest Control</h2>
-      <p>Android App that was made for a local pest control to help them manage
-      their dialy appointments</p>
-    </div>
-  </div>
-</a>
-<div/> 
-*/
-}
